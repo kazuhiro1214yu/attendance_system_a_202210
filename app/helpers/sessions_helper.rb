@@ -12,11 +12,19 @@ module SessionsHelper
     cookies.permanent[:remember_token] = user.remember_token
   end
   
-  
+  # 永続的セッションを破棄します
+  def forget(user)
+    user.forget # Userモデル参照
+    cookies.delete(:user_id)
+    cookies.delete(:remember_token)
+  end
+
+  # セッションと@current_userを破棄します
   def log_out
-    session.delete(:user_id) #ブラウザのcokiesに保存しているsessionのuser.idだけ削除してもだめ
-    @current_user = nil #使い回しやすいようにcurrent_userメソッドで保存した@current_userも削除が必要
-  end 
+    forget(current_user)
+    session.delete(:user_id)
+    @current_user = nil
+  end
 
   # 一時的セッションにいるユーザーを返します。
   # それ以外の場合はcookiesに対応するユーザーを返します。
