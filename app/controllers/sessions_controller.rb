@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       # session(※ブラウザのcokies)にログイン情報(user　id)を保存することが可能
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
-      redirect_to user
+      redirect_back_or user
     else
       flash.now[:danger] = "認証に失敗しました。"
       render :new
