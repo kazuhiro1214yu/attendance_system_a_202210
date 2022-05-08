@@ -10,8 +10,9 @@ class UsersController < ApplicationController
     @users = User.paginate(page: params[:page])
   end
 
-def show
-end
+  def show
+    @worked_sum = @attendances.where.not(started_at: nil).count
+  end
 
   def new
     @user = User.new
