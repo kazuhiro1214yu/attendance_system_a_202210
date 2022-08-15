@@ -24,5 +24,7 @@
 
 次
 ･管理ユーザーでheaderに基本､指定勤務時間の指定を作成｡
+　→index.html.erbファイルの編集　remote:trueを削除することでモーダルウインドウをなくす
+
 
 hisasiburi
