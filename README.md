@@ -26,5 +26,11 @@
 ･管理ユーザーでheaderに基本､指定勤務時間の指定を作成｡
 　→index.html.erbファイルの編集　remote:trueを削除することでモーダルウインドウをなくす
 
+8/16
+headerに基本情報編集のリンクを作成｡
+リンク先に飛べず苦戦したが､｢edit_basic_info_user_path(user)｣と記載していたことが原因｡
+｢user｣はcontrollerで定義していないので､正しくは｢edit_basic_info_user_path(current_user)｣だった｡
+こちらに変更して無事リンク先へ移動､編集可能を確認済み｡
+
 
 hisasiburi
