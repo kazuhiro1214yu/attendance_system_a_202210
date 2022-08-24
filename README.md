@@ -34,6 +34,15 @@ headerに基本情報編集のリンクを作成｡
 
 
 追加機能　7･8の実装
+8/24　完了
+･原因は恥ずかしながら､かんたんな記述ミスでした｡｡
+原因
+attendance.rbコントローラーの　update_one_monthアクション(patch)に
+flashメッセージで｢@attendance.errors.full_messages｣の設定をしたが､
+肝心の｢@attendance｣変数を定義しておらず｡｢attendance｣で変数設定していた｡
+        attendance = Attendance.find(id)
+        attendance.update_attributes!(item)
+　　　　　→attendanceではなく､｢@attendance｣に変えて､解決!
 
-aaaaaaaaaaaaaaaaaaaa
+
 hisasiburi
