@@ -33,4 +33,7 @@ headerに基本情報編集のリンクを作成｡
 こちらに変更して無事リンク先へ移動､編集可能を確認済み｡
 
 
+追加機能　7･8の実装
+
+aaaaaaaaaaaaaaaaaaaa
 hisasiburi
