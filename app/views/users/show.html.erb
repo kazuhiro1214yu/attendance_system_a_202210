@@ -48,10 +48,27 @@
 
     <tbody>
     <% @attendances.each do |day| %>
+    
+<!--曜日に色付けするための記述    -->
+<!--viewファイル内にスタイル用の記述の書くのはよくないが､この方法しかわからず-->
+      <% 
+        css_class = 
+        case $days_of_the_week [day.worked_on.wday]
+        when '土'
+          'text-primary'
+        when '日'
+          'text-danger'
+        end
+      %>
+
       <tr>
         <td><%= l(day.worked_on, format: :short) %></td>
-        <td><%= $days_of_the_week[day.worked_on.wday] %></td>
-         <td><%= l(day.started_at, format: :hour) if day.started_at.present? %></td>
+        
+<!--この上で色付けした曜日を適用させるためにclass名をつけて適用        -->
+        <td class="<%= css_class %>"><%= $days_of_the_week[day.worked_on.wday] %></td>
+
+<!--floor_toを使って15分刻みの表示を設定｡利用のためにroundingというbundleをインストール-->
+        <td><%= l(day.started_at, format: :hour) if day.started_at.present? %></td>
         <td><%= day.started_at.floor_to(15.minutes).strftime("%M") if day.started_at.present? %></td>
         <td>
            <% if btn_text = attendance_state(day) %>
