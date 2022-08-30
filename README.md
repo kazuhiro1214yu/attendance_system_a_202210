@@ -44,5 +44,7 @@ flashメッセージで｢@attendance.errors.full_messages｣の設定をした�
         attendance.update_attributes!(item)
 　　　　　→attendanceではなく､｢@attendance｣に変えて､解決!
 
+2022/08/30
+追加機能10の15分刻みも完了｡あとは追加機能1と9の2つ｡
 
 hisasiburi
