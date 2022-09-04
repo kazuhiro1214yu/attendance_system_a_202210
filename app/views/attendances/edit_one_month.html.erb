@@ -33,7 +33,7 @@
             <td><%= l(day.worked_on, format: :short) %></td>
 
 <!--この上で色付けした曜日を適用させるためにclass名をつけて適用        -->
-        <td class="<%= css_class %>"><%= $days_of_the_week[day.worked_on.wday] %></td>
+            <td class="<%= css_class %>"><%= $days_of_the_week[day.worked_on.wday] %></td>
 
             <% if !current_user.admin? && (Date.current < day.worked_on) %>
               <td><%= attendance.time_field :started_at, readonly: true, class: "form-control" %></td>
