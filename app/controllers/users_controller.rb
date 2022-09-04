@@ -7,6 +7,12 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page])
+    #次のif文は､index.htmlの右上｢検索フォーム｣で検索した場合に必要な条件になる 
+    #検索フォームでは[:name]がﾟparameterで送られてくる｡
+    #検索した場合　=　params[:name]がtrueの場合は､index.htmlの@usersでは｢全ユーザー｣ではなく｢検索結果に該当した全ユーザーだけ｣を表示したい#
+    if params[:name].present? 
+      @users = @users.search(params[:name])
+    end
   end
 
   def show
