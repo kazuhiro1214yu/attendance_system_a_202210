@@ -50,5 +50,7 @@ flashメッセージで｢@attendance.errors.full_messages｣の設定をした�
 2022/9/3
 追加機能9の検索機能｡
 seach機能を使って検索できる条件を作る｡
+→完成　9.4
+``
 
 hisasiburi
