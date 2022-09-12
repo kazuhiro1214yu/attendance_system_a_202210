@@ -66,4 +66,6 @@ heroku にプッシュしたら､そもそもcloud9でもログインできな�
 ログインしたらエラーが出たが､rails;db;resetしてやり直したら､ちゃんと表示できるようになった｡
 この状態でpushする｡
 
+gemfileに　rounding(15分刻みのgem)を入れるのを忘れてたので､追加｡
+
 hisasiburi
