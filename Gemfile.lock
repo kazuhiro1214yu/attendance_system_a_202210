@@ -79,20 +79,17 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
       ruby_dep (~> 1.2)
-    loofah (2.18.0)
+    loofah (2.19.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     method_source (1.0.0)
     mini_mime (1.1.2)
-    mini_portile2 (2.8.0)
     minitest (5.16.3)
     nio4r (2.5.8)
-    nokogiri (1.13.8)
-      mini_portile2 (~> 2.8.0)
+    nokogiri (1.13.8-x86_64-darwin)
       racc (~> 1.4)
-    pg (0.20.0)
     puma (3.12.6)
     racc (1.6.0)
     rack (2.2.4)
@@ -176,7 +173,7 @@ GEM
     will_paginate (3.3.1)
 
 PLATFORMS
-  ruby
+  x86_64-darwin-21
 
 DEPENDENCIES
   bcrypt
@@ -188,7 +185,6 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-  pg (= 0.20.0)
   puma (~> 3.7)
   rails (~> 5.1.6)
   rails-i18n
@@ -207,4 +203,4 @@ RUBY VERSION
    ruby 2.7.6p219
 
 BUNDLED WITH
-   2.1.4
+   2.3.22
